@@ -13,7 +13,7 @@ func main() {
 }
 
 func load() {
-	f, err := os.Open("input.txt") // os.OpenFile has more options if you need them
+	f, err := os.Open("input.txt")
 	defer f.Close()
 	if err != nil {
 		log.Fatal(err)

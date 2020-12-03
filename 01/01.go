@@ -43,7 +43,7 @@ func partTwo(input []int) {
 
 func load() []int {
 	var t []int
-	f, err := os.Open("input.txt") // os.OpenFile has more options if you need them
+	f, err := os.Open("input.txt")
 	defer f.Close()
 	if err != nil {
 		log.Fatal(err)
@@ -51,12 +51,12 @@ func load() []int {
 	var num int
 
 	for {
-		_, err := fmt.Fscanf(f, "%d\n", &num) // give a patter to scan
+		_, err := fmt.Fscanf(f, "%d\n", &num)
 
 		if err != nil {
 
 			if err == io.EOF {
-				break // stop reading the file
+				break
 			}
 			fmt.Println(err)
 			os.Exit(1)
